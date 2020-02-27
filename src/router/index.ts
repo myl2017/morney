@@ -21,7 +21,7 @@ const routes = [
     component: Labels
   },
   {
-    path: 'statitics',
+    path: '/statistics',
     component: Statistics
   },
 ];
