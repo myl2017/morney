@@ -1,12 +1,15 @@
 <template>
-    <Layout>
-        <p>Statistics slot</p>
-    </Layout>
+    <div class="nav-wrapper">
+        <div class="content">
+            <slot/>
+        </div>
+        <Nav/>
+    </div>
 </template>
 
-<script type="ts">
+<script lang="ts">
   export default {
-    name: "Statistics"
+    name: "Layout"
   };
 </script>
 
