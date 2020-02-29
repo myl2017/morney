@@ -1,21 +1,59 @@
 <template>
-    <div class="nav">
-        <router-link to="/money">记账</router-link>
-        |
-        <router-link to="/labels">标签</router-link>
-        |
-        <router-link to="/statistics">统计</router-link>
-    </div>
+    <nav>
+        <router-link to="/money" class="item" active-class="selected">
+            <Icon name="money"/>
+            记账
+        </router-link>
+        <router-link to="/labels" class="item" active-class="selected">
+            <Icon name="label"/>
+            标签
+        </router-link>
+        <router-link to="/statistics" class="item" active-class="selected">
+            <Icon name="statistics"/>
+            统计
+        </router-link>
+    </nav>
 </template>
 
 <script type="ts">
+  // import x from "@/assets/icons/label.svg";
+  // import y from "@/assets/icons/money.svg";
+  // import z from "@/assets/icons/statistics.svg";
+
+
+  // let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
+  // try {
+  //   importAll(require.context(path:'../assets/icons', deep:true, filter: /\.svg$/));
+  // } catch (error) {
+  //   console.log(error)
+  // }
+
   export default {
     name: "Nav"
   };
 </script>
 
 <style lang="scss" scoped>
- .nav {
-     border: 1px solid red;
- }
+    @import "~@/assets/style/helper.scss";
+    nav {
+        @extend %outerShadow;
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        > .item {
+            width: 33.333333%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2px 0;
+            .icon {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        > .item.selected {
+            color: $color-highlight;
+        }
+    }
 </style>
