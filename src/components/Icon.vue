@@ -4,10 +4,10 @@
     </svg>
 </template>
 
-<script type="ts">
-  import x from "@/assets/icons/label.svg";
-  import y from "@/assets/icons/money.svg";
-  import z from "@/assets/icons/statistics.svg";
+<script lang="ts">
+  // import x from "@/assets/icons/label.svg";
+  // import y from "@/assets/icons/money.svg";
+  // import z from "@/assets/icons/statistics.svg";
 
   export default {
     name: "Icon",

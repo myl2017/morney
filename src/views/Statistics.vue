@@ -4,7 +4,7 @@
     </Layout>
 </template>
 
-<script type="ts">
+<script lang="ts">
   export default {
     name: "Statistics"
   };
@@ -12,7 +12,6 @@
 
 <style lang="scss" scoped>
     .layout-wrapper {
-        border: 1px solid green;
         display: flex;
         flex-direction: column;
         height: 100vh;

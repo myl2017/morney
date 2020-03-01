@@ -15,10 +15,10 @@
     </nav>
 </template>
 
-<script type="ts">
-  // import x from "@/assets/icons/label.svg";
-  // import y from "@/assets/icons/money.svg";
-  // import z from "@/assets/icons/statistics.svg";
+<script>
+  import x from "@/assets/icons/label.svg";
+  import y from "@/assets/icons/money.svg";
+  import z from "@/assets/icons/statistics.svg";
 
 
   // let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
