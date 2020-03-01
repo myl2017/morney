@@ -26,7 +26,7 @@
 
   @Component
   export default class NumberPane extends Vue {
-    output: string = "";
+    output: string = "0";
 
     inputContent(event: MouseEvent) {
       const button = (event.target as HTMLButtonElement);
@@ -58,7 +58,9 @@
       this.output = "0";
     }
 
-    ok() {}
+    ok() {
+      this.$emit('update:value',this.output);
+    }
   }
 </script>
 
