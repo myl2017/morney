@@ -15,11 +15,7 @@
     </nav>
 </template>
 
-<script>
-  import x from "@/assets/icons/label.svg";
-  import y from "@/assets/icons/money.svg";
-  import z from "@/assets/icons/statistics.svg";
-
+<script lang="ts">
 
   // let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
   // try {
@@ -35,11 +31,13 @@
 
 <style lang="scss" scoped>
     @import "~@/assets/style/helper.scss";
+
     nav {
         @extend %outerShadow;
         display: flex;
         flex-direction: row;
         font-size: 12px;
+
         > .item {
             width: 33.333333%;
             display: flex;
@@ -47,11 +45,13 @@
             align-items: center;
             flex-direction: column;
             padding: 2px 0;
+
             .icon {
                 width: 32px;
                 height: 32px;
             }
         }
+
         > .item.selected {
             color: $color-highlight;
         }
