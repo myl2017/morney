@@ -27,7 +27,7 @@ const routes = [
     component: Statistics
   },
   {
-    path: '/labels/edit',
+    path: '/labels/edit/:id',
     component: EditLabel
   },
   {  /*上面的都没有匹配项，其他的所有的*/
