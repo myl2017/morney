@@ -1,8 +1,8 @@
 <template>
     <Layout>
         <ol class="tags">
-            <li v-for="tag in tags" :key="tag">
-                <span>{{tag}}</span>
+            <li v-for="tag in tags" :key="tag.id">
+                <span>{{tag.name}}</span>
                 <Icon name="right"/>
             </li>
         </ol>
@@ -69,7 +69,7 @@
 
         &-wrapper { /*表示父元素createTag-wrapper*/
             text-align: center;
-            padding: 16px;
+            padding: 40px;
             margin-top: (44 px-16);
         }
     }
