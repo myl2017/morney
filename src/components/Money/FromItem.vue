@@ -1,8 +1,8 @@
 <template>
     <div>
         <label class="fromItem">
-            <span class="name">{{this.fieldName}}</span>
-            <input type="text" :value="value" @input="onValueChange($event.target.value)" :placeholder="this.placeholder"/>
+            <span class="name">{{fieldName}}</span>
+            <input type="text" :value="value" @input="onValueChange($event.target.value)" :placeholder="placeholder"/>
         </label>
     </div>
 </template>
@@ -18,7 +18,7 @@
     @Prop({required: true}) fieldName!: string;
     @Prop() placeholder?: string;
 
-    @Watch("value")
+    // @Watch("value")
     onValueChange(value: string) {
       this.$emit("update:value", value);
     }
