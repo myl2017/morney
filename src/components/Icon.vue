@@ -5,15 +5,16 @@
 </template>
 
 <script>
-  import x from "@/assets/icons/label.svg";
-  import y from "@/assets/icons/money.svg";
-  import z from "@/assets/icons/statistics.svg";
-  import f from "@/assets/icons/right.svg";
+    import x from "@/assets/icons/label.svg";
+    import y from "@/assets/icons/money.svg";
+    import z from "@/assets/icons/statistics.svg";
+    import f from "@/assets/icons/right.svg";
+    import g from "@/assets/icons/left.svg";
 
-  export default {
-    name: "Icon",
-    props: ["name"]
-  };
+    export default {
+        name: "Icon",
+        props: ["name"]
+    };
 </script>
 
 <style lang="scss" scoped>
