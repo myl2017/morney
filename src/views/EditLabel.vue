@@ -1,15 +1,15 @@
 <template>
     <Layout>
         <div class="navBar">
-            <Icon class="leftIcon" name="left"/>
+            <Icon class="leftIcon" name="left" @click="goBack"/>
             <span class="title">编辑标签</span>
             <span class="rightIcon"></span>
         </div>
         <div class="from-wrapper">
-            <FromItem :value="tag.name" field-name="标签名" placeholder="请输入标签名"/>
+            <FromItem :value="tag.name" @update:value="updateTag" field-name="标签名" placeholder="请输入标签名"/>
         </div>
         <div class="createTag-wrapper button-wrapper">
-            <Button>删除标签</Button>
+            <Button @click="remove">删除标签</Button>
         </div>
     </Layout>
 </template>
@@ -39,6 +39,27 @@
         // this.$router.push("/404");
         this.$router.replace("/404");
       }
+    }
+
+    updateTag(name: string) {
+      console.log(name);
+      if (this.tag) {
+        tagListModel.update(this.tag.id, name);
+      }
+    }
+
+    remove() {
+      if (this.tag) {
+        if (tagListModel.remove(this.tag.id)) { // 返回 true
+          this.$router.back();
+        } else {
+          window.alert("删除失败");
+        }
+      }
+    }
+
+    goBack() {
+      this.$router.back();
     }
   }
 </script>

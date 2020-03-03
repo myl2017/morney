@@ -60,4 +60,7 @@
             }
         }
     }
+    .createTag-wrapper {
+        margin-top: 44-16px;
+    }
 </style>
