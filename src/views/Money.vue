@@ -17,16 +17,22 @@
   import FromItem from "@/components/Money/FromItem.vue";
   import Tags from "@/components/Money/Tags.vue";
   import {Component} from "vue-property-decorator";
-  import store from "@/store/index2.ts";
 
 
   @Component({
-    components: {Tags, FromItem, Types, NumberPane}
+    components: {Tags, FromItem, Types, NumberPane},
+    computed: {
+      recordList() {
+        return this.$store.state.recordList;
+      }
+    }
   })
   export default class Money extends Vue {
-    recordList = store.recordList;
     record: RecordItem = {tags: [], notes: "", type: "-", amount: 0};
 
+    created() {
+      this.$store.commit('fetchRecords')
+    }
 
     // onUpdateTags(value: string[]) {
     //   console.log("test: ", value);
@@ -44,7 +50,7 @@
     }
 
     saveRecord() {
-      store.createRecord(this.record);
+      this.$store.commit("createRecord", this.record);
     }
   }
 </script>
