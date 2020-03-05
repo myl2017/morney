@@ -31,6 +31,7 @@
     }
 
     created() {
+      this.$store.commit("fetchTags");
       this.$store.commit("setCurrentTag", this.$route.params.id);
       if (!this.tag) {
         this.$router.replace("/404");
@@ -41,17 +42,13 @@
     updateTag(name: string) {
       console.log(name);
       if (this.tag) {
-        // store.updateTag(this.tag.id, name);
+        this.$store.commit("updateTag", {id: this.tag.id, name});
       }
     }
 
     remove() {
       if (this.tag) {
-        // if (store.removeTag(this.tag.id)) { // 返回 true
-        //   this.$router.back();
-        // } else {
-        //   window.alert("删除失败");
-        // }
+        this.$store.commit("removeTag", this.tag.id);
       }
     }
 
