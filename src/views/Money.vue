@@ -1,7 +1,7 @@
 <template>
     <Layout class-prefix="layout">
         {{record}}
-        <NumberPane @update:value="onUpdateAmount" @submit="saveRecord"/>
+        <NumberPane :value.sync="record.amount" @submit="saveRecord"/>
         <!--        <Types :value.sync="record.type"/>-->
         <Tabs :data-source="recordTypeList" :value.sync="record.type"/>
         <div class="notes">
@@ -61,7 +61,7 @@
 
 
 <style lang="scss" scoped>
-    .layout-content {
+    ::v-deep .layout-content {
         display: flex;
         flex-direction: column-reverse;
     }
