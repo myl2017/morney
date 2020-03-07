@@ -1,5 +1,6 @@
 type RootState = {
   recordList: RecordItem[],
+  crateRecordError: Error | null,
   tagList: Tag[],
   currentTag?: Tag
 }

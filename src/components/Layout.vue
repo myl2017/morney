@@ -10,7 +10,7 @@
 <script lang="ts">
   export default {
     name: "Layout",
-    props: ['classPrefix'],
+    props: ["classPrefix"],
   };
 </script>
 
@@ -18,7 +18,7 @@
     .layout-wrapper {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .content {
